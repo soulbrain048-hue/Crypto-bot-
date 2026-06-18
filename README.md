@@ -1,40 +1,40 @@
-# AGI Intelligence Bot Framework
+# AGI इंटेलिजेंस बोट फ्रेमवर्क (AGI Intelligence Bot Framework)
 
-This project is a modular framework for an intelligence-driven bot designed to handle tasks in Crypto, Bug Bounty, and Coding Workflows.
+यह प्रोजेक्ट एक इंटेलिजेंस-संचालित बोट के लिए एक मॉड्यूलर फ्रेमवर्क है जिसे क्रिप्टो, बग बाउंटी और कोडिंग वर्कफ़्लो में कार्यों को संभालने के लिए डिज़ाइन किया गया है।
 
-## Project Purpose
+## प्रोजेक्ट का उद्देश्य (Project Purpose)
 
-The AGI Intelligence Bot aims to automate and provide intelligence for the following domains:
+AGI इंटेलिजेंस बोट का लक्ष्य निम्नलिखित क्षेत्रों के लिए स्वचालन (automation) और इंटेलिजेंस प्रदान करना है:
 
-- **Crypto Bot Tasks**: Analysis and tracking related to cryptocurrency and smart contracts.
-- **Bug Bounty Tasks**: Automation for reconnaissance and vulnerability discovery in bug bounty programs.
-- **Coding Workflow Intelligence**: Assisting with development tasks and workflow optimization.
+- **क्रिप्टो बोट कार्य (Crypto Bot Tasks)**: क्रिप्टोकरेंसी और स्मार्ट कॉन्ट्रैक्ट्स से संबंधित विश्लेषण और ट्रैकिंग।
+- **बग बाउंटी कार्य (Bug Bounty Tasks)**: बग बाउंटी कार्यक्रमों में टोही (reconnaissance) और भेद्यता (vulnerability) खोज के लिए स्वचालन।
+- **कोडिंग वर्कफ़्लो इंटेलिजेंस (Coding Workflow Intelligence)**: विकास कार्यों और वर्कफ़्लो अनुकूलन में सहायता करना।
 
-## Features
+## विशेषताएं (Features)
 
-- **Modular Architecture**: Easy to extend with new capabilities.
-- **Intelligence Router**: Automatically routes user queries to the appropriate specialized module.
-- **CLI Interface**: Simple interaction loop for issuing commands to the bot.
+- **मॉड्यूलर आर्किटेक्चर (Modular Architecture)**: नई क्षमताओं के साथ विस्तार करना आसान है।
+- **इंटेलिजेंस राउटर (Intelligence Router)**: उपयोगकर्ता की क्वेरी को स्वचालित रूप से उपयुक्त विशेष मॉड्यूल पर रूट करता है।
+- **CLI इंटरफ़ेस (CLI Interface)**: बोट को कमांड जारी करने के लिए सरल इंटरैक्शन लूप।
 
-## Getting Started
+## शुरुआत कैसे करें (Getting Started)
 
-### Installation
+### इंस्टालेशन (Installation)
 
-1. Install the required dependencies:
+1. आवश्यक निर्भरताएँ (dependencies) इंस्टॉल करें:
    ```bash
    pip install -r requirements.txt
    ```
 
-### Running the Bot
+### बोट चलाना (Running the Bot)
 
-Start the main bot interface:
+मुख्य बोट इंटरफ़ेस शुरू करें:
 ```bash
 python main.py
 ```
 
-### Running Tests
+### टेस्ट चलाना (Running Tests)
 
-Run the test suite using `pytest`:
+`pytest` का उपयोग करके टेस्ट सूट चलाएं:
 ```bash
-pytest tests/
+PYTHONPATH=. pytest tests/
 ```

@@ -1,6 +1,5 @@
 def handle_bounty(query):
     """
-    Handles bug bounty related intelligence queries.
+    बग बाउंटी से संबंधित इंटेलिजेंस क्वेरीज़ को संभालता है।
     """
-    # Placeholder for future bug bounty logic (e.g., automated recon, vulnerability scanning)
-    return f"[Bounty Module] Processing query: '{query}'. Intelligence output: Bug bounty reconnaissance initiated..."
+    return f"[बाउंटी मॉड्यूल] आपकी क्वेरी: '{query}' पर काम हो रहा है। इंटेलिजेंस आउटपुट: बग बाउंटी टोही (reconnaissance) शुरू कर दी गई है..."

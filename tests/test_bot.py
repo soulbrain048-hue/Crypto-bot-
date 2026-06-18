@@ -1,29 +1,29 @@
 from core.intelligence import route_query
 
-def test_route_crypto():
-    query = "Check crypto prices"
+def test_route_crypto_hindi():
+    query = "क्रिप्टो चेक करो"
     response = route_query(query)
-    assert "[Crypto Module]" in response
+    assert "[क्रिप्टो मॉड्यूल]" in response
     assert query in response
 
-def test_route_bounty():
-    query = "Start a bounty hunt"
+def test_route_bounty_hindi():
+    query = "बग बाउंटी शुरू करो"
     response = route_query(query)
-    assert "[Bounty Module]" in response
+    assert "[बाउंटी मॉड्यूल]" in response
     assert query in response
 
-def test_route_workflow():
-    query = "Improve my workflow"
+def test_route_workflow_hindi():
+    query = "मेरा काम आसान करो"
     response = route_query(query)
-    assert "[Workflow Module]" in response
+    assert "[वर्कफ़्लो मॉड्यूल]" in response
     assert query in response
 
-def test_route_unknown():
-    query = "What is the weather?"
+def test_route_unknown_hindi():
+    query = "आज का मौसम क्या है?"
     response = route_query(query)
-    assert "I'm sorry, I couldn't determine" in response
+    assert "क्षमा करें, मैं यह नहीं समझ पा रहा हूँ" in response
 
-def test_route_case_insensitive():
+def test_route_case_insensitive_crypto():
     query = "CRYPTO query"
     response = route_query(query)
-    assert "[Crypto Module]" in response
+    assert "[क्रिप्टो मॉड्यूल]" in response

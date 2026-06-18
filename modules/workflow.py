@@ -1,6 +1,5 @@
 def handle_workflow(query):
     """
-    Handles coding workflow intelligence queries.
+    कोडिंग वर्कफ़्लो इंटेलिजेंस क्वेरीज़ को संभालता है।
     """
-    # Placeholder for future workflow logic (e.g., task management, CI/CD automation)
-    return f"[Workflow Module] Processing query: '{query}'. Intelligence output: Workflow optimization suggestions generating..."
+    return f"[वर्कफ़्लो मॉड्यूल] आपकी क्वेरी: '{query}' पर काम हो रहा है। इंटेलिजेंस आउटपुट: वर्कफ़्लो अनुकूलन (optimization) सुझाव तैयार किए जा रहे हैं..."
