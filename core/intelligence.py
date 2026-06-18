@@ -1,19 +1,18 @@
-from modules.crypto import handle_crypto
-from modules.bounty import handle_bounty
-from modules.workflow import handle_workflow
+from core.llm_client import llm_client
 
 def route_query(query):
     """
-    कीवर्ड के आधार पर उपयोगकर्ता की क्वेरी को उचित मॉड्यूल पर रूट करता है।
+    Groq LLM का उपयोग करके उपयोगकर्ता की क्वेरी को प्रोसेस करता है।
     """
-    query_lower = query.lower()
+    system_prompt = """
+    आप एक AGI इंटेलिजेंस बोट हैं जो 'क्रिप्टो', 'बग बाउंटी' और 'कोडिंग वर्कफ़्लो' में माहिर है।
+    उपयोगकर्ता के सवाल का जवाब हिंदी में दें।
+    अगर सवाल इन तीन क्षेत्रों से संबंधित है, तो विशेषज्ञ की तरह जवाब दें।
+    अगर नहीं, तो विनम्रता से बताएं कि आप इनमें विशेषज्ञ हैं।
+    हमेशा अपनी पहचान '[AGI Intelligence Bot]' के रूप में करें।
+    """
 
-    # English and Hindi keywords
-    if any(kw in query_lower for kw in ["crypto", "क्रिप्टो"]):
-        return handle_crypto(query)
-    elif any(kw in query_lower for kw in ["bounty", "बाउंटी", "बग"]):
-        return handle_bounty(query)
-    elif any(kw in query_lower for kw in ["workflow", "वर्कफ़्लो", "काम"]):
-        return handle_workflow(query)
-    else:
-        return "क्षमा करें, मैं यह नहीं समझ पा रहा हूँ कि आपकी क्वेरी को किस मॉड्यूल पर भेजा जाए। कृपया 'क्रिप्टो', 'बाउंटी', या 'वर्कफ़्लो' जैसे कीवर्ड का उपयोग करें।"
+    full_prompt = f"{system_prompt}\n\nUser Query: {query}"
+
+    response = llm_client.get_response(full_prompt)
+    return response
